@@ -1,0 +1,116 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+      "title": "Swagger generate-emai  - OpenAPI 3.0",
+      "version": "1.0.11"
+    },
+    "paths": {
+      "/generate-email": {
+        "get": {
+          "summary": "Generate an email address based on input parameters and expression",
+          "parameters": [
+            {
+              "name": "input1",
+              "in": "query",
+              "required": true,
+              "description": "The first input parameter",
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "input2",
+              "in": "query",
+              "required": true,
+              "description": "The second input parameter",
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "input3",
+              "in": "query",
+              "required": true,
+              "description": "The third input parameter",
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "input4",
+              "in": "query",
+              "required": true,
+              "description": "The fourth input parameter",
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "input5",
+              "in": "query",
+              "required": true,
+              "description": "The fifth input parameter",
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "expression",
+              "in": "query",
+              "required": true,
+              "description": "The expression used to generate the email address",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Email address generated successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "data": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "description": "The generated email address"
+                            },
+                            "value": {
+                              "type": "string",
+                              "description": "The generated email address"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input or expression",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "error": {
+                        "type": "string",
+                        "description": "Error message"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
